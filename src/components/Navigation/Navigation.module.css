@@ -1,0 +1,25 @@
+.navig {
+  display: flex;
+  justify-content: space-between;
+  font-size: large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 12px;
+}
+
+.navlink {
+  color: #9e9e9e;
+}
+
+.active {
+  color: #708238;
+}
+
+.navHeader {
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 15px;
+}
+
+.spanWrapper {
+  display: flex;
+  gap: 20px;
+}
