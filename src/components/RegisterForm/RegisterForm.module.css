@@ -30,6 +30,7 @@
 
 .formInput:focus {
   background-color: #dcedc8;
+  padding-left: 3px;
 }
 
 .spanWrapper {
@@ -61,4 +62,26 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-bottom: 25px;
   color: #708238;
+}
+
+.error {
+  height: 16px;
+  color: red;
+  font-size: 16px;
+  text-align: left;
+}
+
+.formInput:has(+ .error) {
+  margin-bottom: 0px;
+}
+
+.link {
+  color: #708238;
+  font-size: large;
+  margin-left: 5px;
+}
+
+.ptext {
+  margin-top: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
