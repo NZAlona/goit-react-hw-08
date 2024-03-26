@@ -1,0 +1,28 @@
+.photo {
+  width: auto;
+  height: 212px;
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.19) 0 10px 10px 0, rgba(0, 0, 0, 0.23) 0 6px 3px 0;
+  border-radius: 50%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 635px;
+  box-shadow: 1px 0 2px black;
+}
+
+.title {
+  padding-bottom: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.7;
+  color: #708238;
+  margin: 0 auto;
+}
+
+.titleText {
+  composes: title;
+  width: 670px;
+}
