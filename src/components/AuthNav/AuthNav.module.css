@@ -1,9 +1,9 @@
-.navig {
+.spanWrapper {
   display: flex;
   gap: 20px;
+  padding: 5px;
   font-size: large;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  padding: 5px;
 }
 
 .navlink {

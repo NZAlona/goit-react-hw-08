@@ -1,9 +1,10 @@
 .container {
   box-shadow: 1px 0 2px black;
-  height: 635px;
+
   display: flex;
   justify-content: center;
   flex-direction: column;
+  height: 625px;
 }
 
 .forma {

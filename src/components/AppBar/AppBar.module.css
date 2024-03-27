@@ -1,0 +1,6 @@
+.navHeader {
+  box-shadow: 0 0 0 4px white, 0 6px 4px black;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
