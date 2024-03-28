@@ -57,6 +57,7 @@
   border: 1px solid transparent;
   width: 95px;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 .text {

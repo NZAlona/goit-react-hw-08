@@ -3,14 +3,19 @@ import css from './LoginForm.module.css';
 import * as Yup from 'yup';
 import { ErrorMessage } from 'formik';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { loginRequest } from '../../redux/authentication/operations';
 
 const ValidationSchema = Yup.object().shape({
-  useremail: Yup.string().email('Must be a valid email!').required('Required'),
-  userpassword: Yup.string().min(3, 'Too short').max(256, 'Too long').required('Required'),
+  email: Yup.string().email('Must be a valid email!').required('Required'),
+  password: Yup.string().min(7, 'Too short').max(256, 'Too long').required('Required'),
 });
 
 export default function LongInForm() {
+  const dispatch = useDispatch();
+
   const handleSubmit = (values, actions) => {
+    dispatch(loginRequest(values));
     console.log(values);
     actions.resetForm();
   };
@@ -20,23 +25,23 @@ export default function LongInForm() {
       <span className={css.spanWrapper}>
         <Formik
           initialValues={{
-            useremail: '',
-            userpassword: '',
+            email: '',
+            password: '',
           }}
           onSubmit={handleSubmit}
           validationSchema={ValidationSchema}
         >
-          <Form className={css.forma}>
-            <label htmlFor="useremail" className={css.formLabel}>
+          <Form className={css.forma} autoComplete="off">
+            <label htmlFor="email" className={css.formLabel}>
               Email
             </label>
-            <Field type="text" name="useremail" className={css.formInput} />
-            <ErrorMessage name="useremail" component="span" className={css.error} />
-            <label htmlFor="userpassword" className={css.formLabel}>
+            <Field type="text" name="email" className={css.formInput} />
+            <ErrorMessage name="email" component="span" className={css.error} />
+            <label htmlFor="password" className={css.formLabel}>
               Password
             </label>
-            <Field type="password" name="userpassword" className={css.formInput} />
-            <ErrorMessage name="userpassword" component="span" className={css.error} />
+            <Field type="password" name="password" className={css.formInput} />
+            <ErrorMessage name="password" component="span" className={css.error} />
             <button type="submit" className={css.btn}>
               Log In
             </button>
