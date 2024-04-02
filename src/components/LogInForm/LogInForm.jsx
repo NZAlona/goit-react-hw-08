@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import { ErrorMessage } from 'formik';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { loginRequest } from '../../redux/authentication/operations';
+import { loginRequest } from '../../redux/auth/operations';
 
 const ValidationSchema = Yup.object().shape({
   email: Yup.string().email('Must be a valid email!').required('Required'),
