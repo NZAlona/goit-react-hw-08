@@ -1,5 +1,6 @@
-import picture from '../assets/Graphicloads-100-Flat-2-Addressbook-green.256.png';
+import picture from '../assets/phone-book.png';
 import css from './Home.module.css';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
   return (
@@ -14,6 +15,11 @@ export default function Home() {
 
       <span>
         <img src={picture} alt="phoonebook icon" className={css.photo} />
+      </span>
+      <span>
+        <Link to="/register">
+          <button className={css.btn}>Get started</button>
+        </Link>
       </span>
     </div>
   );

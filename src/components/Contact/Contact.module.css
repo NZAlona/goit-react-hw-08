@@ -1,0 +1,24 @@
+.btn {
+  width: 95px;
+  padding: 10px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  background-color: #708238;
+  border-width: 2px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid rgba(27, 31, 35, 0.41);
+}
+
+.spanWrapper {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.8;
+  padding-left: 10px;
+  margin-right: 25px;
+}
+
+.icons {
+  margin-right: 10px;
+}
