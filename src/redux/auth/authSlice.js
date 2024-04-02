@@ -38,9 +38,9 @@ const authSlice = createSlice({
         state.isLoggedIn = false;
         state.error = action.payload;
       })
-      .addCase(logOutRequest.pending, state => {
-        state.isLoggedIn = true;
-      })
+      // .addCase(logOutRequest.pending, state => {
+      //   // state.isLoggedIn = true;
+      // })
       .addCase(logOutRequest.fulfilled, state => {
         state.isLoggedIn = false;
         state.user = {
@@ -50,7 +50,7 @@ const authSlice = createSlice({
         state.token = null;
       })
       .addCase(logOutRequest.rejected, (state, action) => {
-        state.isLoggedIn = false;
+        // state.isLoggedIn = false;
         state.error = action.payload;
       }),
 });

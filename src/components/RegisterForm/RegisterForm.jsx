@@ -4,7 +4,7 @@ import css from './RegisterForm.module.css';
 import * as Yup from 'yup';
 import { ErrorMessage } from 'formik';
 import { useDispatch } from 'react-redux';
-import { registerRequest } from '../../redux/authentication/operations';
+import { registerRequest } from '../../redux/auth/operations';
 // import toast, { Toaster } from 'react-hot-toast';
 
 // const notify = () => toast('Here is your toast.');
@@ -19,7 +19,7 @@ import { registerRequest } from '../../redux/authentication/operations';
 // };
 
 const ValidationSchema = Yup.object().shape({
-  name: Yup.string().min(2, 'Too Short!').max(50, 'Too Long!').required('Required'),
+  name: Yup.string().min(3, 'Too Short!').max(50, 'Too Long!').required('Required'),
   email: Yup.string().email('Must be a valid email!').required('Required'),
   password: Yup.string().min(7, 'Too short').max(256, 'Too long').required('Required'),
 });

@@ -3,10 +3,12 @@ import axios from 'axios';
 
 axios.defaults.baseURL = 'https://connections-api.herokuapp.com/';
 
+// passing token in headers with every next HTTP request to let server know about user's creadentials
 const setAuthHeader = token => {
   axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 };
 
+// When user logout we clear bearer token
 const clearAutHeader = () => {
   axios.defaults.headers.common['Authorization'] = ' ';
 };
