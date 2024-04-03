@@ -1,6 +1,6 @@
 import { Field, Form, Formik } from 'formik';
 import { Link } from 'react-router-dom';
-import css from './RegisterForm.module.css';
+import css from './RegistrationForm.module.css';
 import * as Yup from 'yup';
 import { ErrorMessage } from 'formik';
 import { useDispatch } from 'react-redux';
