@@ -1,7 +1,7 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 // import Home from './pages/Home';
-import NotFoundPage from './pages/NotFoundPage';
+// import NotFoundPage from './pages/NotFoundPage';
 // import LogIn from './pages/LogIn';
 // import Register from './pages/Register';
 // import Contacts from './pages/Contacts';
@@ -17,6 +17,7 @@ const Home = lazy(() => import('./pages/Home'));
 const Register = lazy(() => import('./pages/Register'));
 const LogIn = lazy(() => import('./pages/LogIn'));
 const Contacts = lazy(() => import('./pages/Contacts'));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
 export default function App() {
   const dispatch = useDispatch();
