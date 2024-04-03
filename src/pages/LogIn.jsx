@@ -1,9 +1,9 @@
-import LongInForm from '../components/LogInForm/LogInForm';
+import LonginForm from '../components/LoginForm/LoginForm';
 
 export default function LogIn() {
   return (
     <>
-      <LongInForm />
+      <LonginForm />
     </>
   );
 }

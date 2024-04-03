@@ -1,11 +1,11 @@
 import { FaUser } from 'react-icons/fa6';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import css from './Contact.module.css';
-// import { deleteContact } from '../../redux/contactsOps';
-// import { useDispatch } from 'react-redux';
+import { deleteContact } from '../../redux/contacts/operations';
+import { useDispatch } from 'react-redux';
 
 export default function Contact({ value: { name, number, id } }) {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   return (
     <>
