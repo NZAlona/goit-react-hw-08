@@ -1,12 +1,15 @@
 import { FaUser } from 'react-icons/fa6';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import css from './Contact.module.css';
-import { deleteContact } from '../../redux/contacts/operations';
-import { useDispatch } from 'react-redux';
+import { useState } from 'react';
+import Modal from '../Modal/Modal';
 
 export default function Contact({ value: { name, number, id } }) {
-  const dispatch = useDispatch();
+  const [isOpen, setIsOpen] = useState(false);
 
+  const closeModal = () => {
+    setIsOpen(false);
+  };
   return (
     <>
       <span className={css.spanWrapper}>
@@ -22,10 +25,11 @@ export default function Contact({ value: { name, number, id } }) {
       </span>
 
       <span>
-        <button type="button" className={css.btn} onClick={() => dispatch(deleteContact(id))}>
+        <button type="button" className={css.btn} onClick={() => setIsOpen(true)}>
           Delete
         </button>
       </span>
+      {isOpen && <Modal onClose={closeModal} id={id} />}
     </>
   );
 }

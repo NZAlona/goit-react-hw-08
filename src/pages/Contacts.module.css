@@ -11,4 +11,5 @@
 .wrapper {
   height: auto;
   box-shadow: 1px 0 2px black;
+  position: relative;
 }
