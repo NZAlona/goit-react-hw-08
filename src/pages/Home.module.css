@@ -1,17 +1,24 @@
 .photo {
   width: auto;
-  height: 150px;
+  height: 120px;
   margin: 0 auto;
-  /* box-shadow: rgba(0, 0, 0, 0.19) 0 10px 10px 0, rgba(0, 0, 0, 0.23) 0 6px 3px 0;
-  border-radius: 10%; */
+
+  @media screen and (min-width: 768px) {
+    height: 150px;
+  }
 }
 
 .container {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 625px;
+  /* height: 625px; */
+  height: 615px;
   box-shadow: 1px 0 2px black;
+
+  @media screen and (min-width: 768px) {
+    height: 625px;
+  }
 }
 
 .title {
@@ -20,12 +27,27 @@
   line-height: 1.7;
   color: #708238;
   margin: 0 auto;
+  font-size: x-large;
+
+  @media screen and (min-width: 768px) {
+    font-size: xx-large;
+  }
 }
 
 .titleText {
-  composes: title;
-  width: 670px;
+  /* composes: title; */
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.7;
+  margin: 0 auto;
   color: black;
+  font-size: 14px;
+
+  @media screen and (min-width: 768px) {
+    width: 670px;
+    padding-bottom: 20px;
+    font-size: 19px;
+  }
 }
 
 .btn {
