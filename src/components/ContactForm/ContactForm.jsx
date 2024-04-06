@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import { ErrorMessage } from 'formik';
 import { addContact } from '../../redux/contacts/operations';
 import { useDispatch } from 'react-redux';
+import toast from 'react-hot-toast';
 
 const phoneRegex = /^([0-9]+-)*[0-9]+$/;
 
@@ -30,7 +31,10 @@ export default function ContactForm() {
         name: values.name,
         number: values.number,
       })
-    );
+    )
+      .unwrap()
+      .then(() => toast.success('You have just added a new user'))
+      .catch(() => toast.error('Something went wrong'));
 
     console.log(values);
     actions.resetForm();
