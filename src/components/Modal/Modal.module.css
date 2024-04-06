@@ -23,7 +23,7 @@
 
 .btn {
   display: block;
-  width: 135px;
+  width: 140px;
   height: 34px;
   background-color: #708238;
   border-radius: 4px;
@@ -31,6 +31,10 @@
   outline: none;
   border: 1px solid #708238;
   color: #9e9e9e;
+
+  @media screen and (min-width: 768px) {
+    width: 135px;
+  }
 }
 
 .container {

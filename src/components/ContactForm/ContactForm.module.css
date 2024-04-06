@@ -62,10 +62,14 @@
 
 .labelName {
   width: 0;
-  padding-left: 30px;
+  padding-left: 18px;
   font-size: 18px;
   color: #9e9e9e;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  @media screen and (min-width: 768px) {
+    padding-left: 30px;
+  }
 }
 
 .labelNumber {
